@@ -8,7 +8,12 @@ import data, { Cairns } from './data.js';
 function App() {
   return (
     <div className="App">
-      <div>
+      <div
+        style={{
+          width: "fit-content",
+          margin: "0 auto",
+        }}
+      >
         <Card
           max={Cairns.main.temp_max}
           min={Cairns.main.temp_min}
@@ -19,15 +24,11 @@ function App() {
       </div>
       <hr />
       <div>
-        <Cards
-          cities={data}
-        />
+        <Cards cities={data} />
       </div>
       <hr />
       <div>
-        <SearchBar
-          onSearch={(ciudad) => alert(ciudad)}
-        />
+        <SearchBar onSearch={(ciudad) => alert(ciudad)} />
       </div>
     </div>
   );
